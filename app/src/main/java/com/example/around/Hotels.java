@@ -54,5 +54,22 @@ public class Hotels
     {
         hotelListSetup.add(/* API CALL*/null);
     }
+        
+        
+        
     }
+    
+      public void selectRoomButton(Hotels name)
+    {
+//         Intent myIntent = new Intent(MainActivity.this, listofhotels.class);
+//         myIntent.putExtra("key", value); //Optional parameters
+//         MainActivity.this.startActivity(myIntent);
+          
+          
+          Intent intent = new Intent(Intent.ACTION_MAIN);
+    intent.setComponent(new ComponentName(
+                                "package_name","AnyWhereDoor.MainActivity"));
+    startActivity(intent);
+    }
+
 }
