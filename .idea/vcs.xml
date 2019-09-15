@@ -3,6 +3,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/ARound_HackMIT" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/CSC300YelpAPI" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/android-custom-array-adapter-demo" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/navigation-toolbar-android" vcs="Git" />
   </component>

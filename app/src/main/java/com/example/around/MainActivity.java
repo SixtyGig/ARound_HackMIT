@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -47,10 +48,10 @@ public class MainActivity extends AppCompatActivity {
         {
             View itemView = getLayoutInflater().inflate(R.layout.list_item_hotel, parent, false);
 
-            TextView tvName = itemView.findViewById(R.id.tvName);
+            EditText tvName = (EditText) itemView.findViewById(R.id.etName);
             //TextView tv test = itemView.findViewById(R.id.tvTest);
-            tvName.setText(getItem(position).getName());
-            tvTest.setText(getItem(position.getTest));
+            etName.setText(getItem(position).getName());
+            tvTest.setText(getItem(position).getTest());
             return itemView;
         }
 
