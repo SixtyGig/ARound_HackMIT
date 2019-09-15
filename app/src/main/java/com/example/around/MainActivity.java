@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        lvHotels = findViewById(R.id.lvHotels);
+        lvHotels = (ListView) findViewById(R.id.lvHotels);
         HotelAdapter hotelAdapter = new HotelAdapter();
         lvHotels.setAdapter(hotelAdapter);
     }
