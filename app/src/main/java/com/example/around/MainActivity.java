@@ -2,7 +2,8 @@ package com.example.around;
 
 
 import androidx.appcompat.app.AppCompatActivity;
-
+import com.amadeus.Amadeus;
+import com.amadeus.Params;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +17,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.amadeus.Amadeus;
 import com.amadeus.Params;
 import com.amadeus.resources.*;
+import com.amadeus.exceptions.ResponseException;
+import com.amadeus.referenceData.*;
+
+import com.amadeus.resources.HotelOffer;
+import com.amadeus.resources.HotelOffer.Offer;
 
 import java.util.ArrayList;
 
@@ -32,8 +38,12 @@ public class MainActivity extends AppCompatActivity {
         etSearch = (EditText) findViewById(R.id.etSearch);
         HotelAdapter hotelAdapter = new HotelAdapter();
         lvHotels.setAdapter(hotelAdapter);
-    }
-
+        try {
+            hotelAdapter.amadeusCall();
+        }
+        catch (Exception e) {
+            System.out.println(e);
+        }
     class HotelAdapter extends BaseAdapter
     {
         @Override
@@ -60,7 +70,8 @@ public class MainActivity extends AppCompatActivity {
             return itemView;
         }
     }
-    public void amadeusCall() throws ResponseException {
+
+        public void amadeusCall() throws ResponseException {
         Amadeus amadeus = Amadeus
                 .builder("tJtxA16mqQnXlPIFfArHDCanuzS9wCFA", "rWLNeo3DAvwzM3u8")
                 .build();
