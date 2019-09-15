@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
             //TextView tv test = itemView.findViewById(R.id.tvTest);
             tvName.setText(getItem(position).getName());
             tvTest.setText(getItem(position.getTest));
+            return itemView;
         }
 
 
