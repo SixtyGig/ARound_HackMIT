@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
             View itemView = getLayoutInflater().inflate(R.layout.list_item_hotel, parent, false);
 
             TextView tvName = itemView.findViewById(R.id.tvName);
-            //TextView tv test = itemView.findViewById(R.id.tvTest);
+            //TextView tv test = itemView.findViewById(R.id.tvTest):
             tvName.setText(getItem(position).getName());
             tvTest.setText(getItem(position.getTest));
         }
